@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, ChangeEvent } from 'react';
 import {
   Input,
   Button,
@@ -29,18 +29,23 @@ export const ResetPasswordUI: FC<ResetPasswordUIProps> = ({
             onChange={(e) => setPassword(e.target.value)}
             value={password}
             name='password'
+            placeholder='Введите новый пароль'
           />
         </div>
         <div className='pb-6'>
           <Input
             type='text'
             placeholder='Введите код из письма'
-            onChange={(e) => setToken(e.target.value)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              setToken(e.target.value)
+            }
             value={token}
             name='token'
             error={false}
             errorText=''
             size='default'
+            onPointerEnterCapture={() => {}} // Add empty function
+            onPointerLeaveCapture={() => {}} // Add empty function
           />
         </div>
         <div className={`pb-6 ${styles.button}`}>

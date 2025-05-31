@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, ChangeEvent } from 'react';
 import {
   Input,
   Button,
@@ -29,12 +29,16 @@ export const LoginUI: FC<LoginUIProps> = ({
             <Input
               type='email'
               placeholder='E-mail'
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                setEmail(e.target.value)
+              }
               value={email}
               name='email'
               error={false}
               errorText=''
               size='default'
+              onPointerEnterCapture={() => {}} // Add empty function
+              onPointerLeaveCapture={() => {}} // Add empty function
             />
           </div>
           <div className='pb-6'>
