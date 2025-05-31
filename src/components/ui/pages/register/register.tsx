@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, ChangeEvent } from 'react';
 import {
   Input,
   Button,
@@ -31,24 +31,32 @@ export const RegisterUI: FC<RegisterUIProps> = ({
             <Input
               type='text'
               placeholder='Имя'
-              onChange={(e) => setUserName(e.target.value)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                setUserName(e.target.value)
+              }
               value={userName}
               name='name'
               error={false}
               errorText=''
               size='default'
+              onPointerEnterCapture={() => {}} // Add empty function
+              onPointerLeaveCapture={() => {}} // Add empty function
             />
           </div>
           <div className='pb-6'>
             <Input
               type='email'
               placeholder='E-mail'
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                setEmail(e.target.value)
+              }
               value={email}
               name={'email'}
               error={false}
               errorText=''
               size={'default'}
+              onPointerEnterCapture={() => {}} // Add empty function
+              onPointerLeaveCapture={() => {}} // Add empty function
             />
           </div>
           <div className='pb-6'>

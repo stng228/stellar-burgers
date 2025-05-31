@@ -1,9 +1,7 @@
-import { FC } from 'react';
-
+import { FC, ChangeEvent } from 'react';
 import { Button, Input } from '@zlden/react-developer-burger-ui-components';
 import styles from './profile.module.css';
 import commonStyles from '../common.module.css';
-
 import { ProfileUIProps } from './type';
 import { ProfileMenu } from '@components';
 
@@ -35,6 +33,8 @@ export const ProfileUI: FC<ProfileUIProps> = ({
             errorText={''}
             size={'default'}
             icon={'EditIcon'}
+            onPointerEnterCapture={() => {}} // Add empty function
+            onPointerLeaveCapture={() => {}} // Add empty function
           />
         </div>
         <div className='pb-6'>
@@ -48,6 +48,8 @@ export const ProfileUI: FC<ProfileUIProps> = ({
             errorText={''}
             size={'default'}
             icon={'EditIcon'}
+            onPointerEnterCapture={() => {}} // Add empty function
+            onPointerLeaveCapture={() => {}} // Add empty function
           />
         </div>
         <div className='pb-6'>
@@ -61,6 +63,8 @@ export const ProfileUI: FC<ProfileUIProps> = ({
             errorText={''}
             size={'default'}
             icon={'EditIcon'}
+            onPointerEnterCapture={() => {}} // Add empty function
+            onPointerLeaveCapture={() => {}} // Add empty function
           />
         </div>
         {isFormChanged && (
